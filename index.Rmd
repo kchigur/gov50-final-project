@@ -11,4 +11,6 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to feelings of political freedom at Harvard. I'm interested in exploring the extent to which students feel their political opinions are accepted here taking into account factors like class, demographics, hometown, and concentration. 
+Have judicial appointments become more ideological over time? In this study I plan to explore the extent to which approved appointees to federal courts have become more ideological on a set scale. My hypothesis is that they have, under the pretense that presidents themselves have become more ideological and as has the voting population. Likewise, there are less judges in general that are unbiased ideological, making them harder to nominate to the court. My sample consists of appointment history from 1990 - 2016. The explanatory variable is the year and the outcome variable is the ideological score of each of the appointees. It is recorded on a percentage scale of absolute value, meaning the higher the percentage the higher the ideological bias in either direction. If there seemed to be a net increase in ideological extremity over time, the hypothesis will be proven. If there is not an increase, that would disprove my hypothesis. 
+
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8WYLCG 
