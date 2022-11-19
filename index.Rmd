@@ -14,3 +14,27 @@ output:
 Have judicial appointments become more ideological over time? In this study I plan to explore the extent to which approved appointees to federal courts have become more ideological on a set scale. My hypothesis is that they have, under the pretense that presidents themselves have become more ideological and as has the voting population. Likewise, there are less judges in general that are unbiased ideological, making them harder to nominate to the court. My sample consists of appointment history from 1990 - 2016. The explanatory variable is the year and the outcome variable is the ideological score of each of the appointees. It is recorded on a percentage scale of absolute value, meaning the higher the percentage the higher the ideological bias in either direction. If there seemed to be a net increase in ideological extremity over time, the hypothesis will be proven. If there is not an increase, that would disprove my hypothesis. 
 
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8WYLCG 
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+appointments <- read.csv("Politics-Interim-Judicial-Appts.csv")
+
+appointments |>
+  group_by(year) |>
+  summarize (polarity = mean(imputed_gov_nom_ideo_distance)) |>
+  ggplot (aes(x=year, y=polarity)) +
+  geom_smooth (color = "#900000") +
+  labs (
+    x = "Year", 
+    y = "Ideological polarity of the Appointee (in percentage)", 
+    title = "Trend of polarity in judicial appointments"
+  )
+
+```
+
+
+As seen in the above trend, there is a significant increase in the polarity of the candidates overtime. Between 1990 and 1995 there is an aparent downward trend, but around 1994, the trend suddenly and sharply turns. 
+
+
